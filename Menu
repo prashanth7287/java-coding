@@ -1,0 +1,48 @@
+import java.util.*;
+class Menu
+{
+  public static void main(String args[])
+  {
+   Scanner sc=new Scanner(System.in);
+   LinkedList<Integer>T=new LinkedList<Integer>();
+   int n,i,s;
+   System.out.println("1.Begining insert 2.End insert 3.Position insert 4.Begining delete 5.End delete  6.Position delete 7.Display 8.Exit");
+   s=sc.nextInt();
+   do
+   {
+      switch(s)
+   {
+    case 1:System.out.println("Enter n value");
+    n=sc.nextInt();
+    T.addFirst(n);
+    
+    break;
+   case 2:System.out.println("Enter n value");
+    n=sc.nextInt();
+    T.addLast(n);
+     break; 
+    case 3:System.out.println("Enter n value");
+    n=sc.nextInt();
+    i=T.indexOf(n);
+    T.add(i,n);
+    break;
+   case 4:
+    T.removeFirst();
+     break;
+    case 5:
+    T.removeLast();
+     break;
+    case 6:System.out.println("Enter n value");
+    n=sc.nextInt();
+    i=T.indexOf(n);
+    T.remove(i);
+   break;
+    case 7: System.out.println(T);
+    break;
+    default:System.out.println(T);
+ }
+ System.out.println("1.Begining insert 2.End insert 3.Position insert 4.Besing delete 5.End delete  6.Position delete 7.Display 8.Exit");
+s=sc.nextInt();
+}while(s<8);
+}
+}
