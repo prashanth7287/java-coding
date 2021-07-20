@@ -1,0 +1,15 @@
+class Gh
+{
+    static int map(int n, String keys[], int arr[], String s)
+    {
+        HashMap<String,Integer>T=new HashMap<String,Integer>();
+        for(int i=0;i<n;i++)
+        T.put(keys[i],arr[i]);
+        if(T.containsKey(s))
+        {
+            return T.get(s);
+        }
+        else
+        return -1;
+    }
+}
